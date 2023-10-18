@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import FormElement from './components/FormElement';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class Form extends React.Component{
+  render() {
+    const headingStyle = {
+      textAlign: 'center'
+    };
+
+    return (
+      <div>
+        <h2 style={headingStyle}>TUGAS FORM & VALIDATION</h2>
+        <FormElement />
+      </div>
+    )
+  }
 }
-
-export default App;
