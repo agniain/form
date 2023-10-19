@@ -86,12 +86,16 @@ class CombinedForm extends React.Component {
 
         const validation = new Validator(data, rules);
         validation.passes();
-
+        
         if (validation.fails()) {
             this.setState({
                 formErrors: validation.errors.all()
             });
         } else {
+            this.setState({
+                formErrors: []
+            });
+
             const memberStatus = form.member ? 'YES' : 'NO';
             const alertMessage = `
             Nama: ${data.nama}\n
